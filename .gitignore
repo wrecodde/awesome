@@ -1,2 +1,5 @@
 # ignoring venv folder
 venv/
+
+# ignoring python cache files
+*.pyc
