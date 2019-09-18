@@ -1,0 +1,35 @@
+{% extends "awesomeusers/base.html" %}
+
+{% block title %}
+<title>App Awesome - Signup</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center my-5">
+    <div class="col-md-4">
+      <form action="{% url 'awesomeusers:signup' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <p class="display-4">Signup.</p>
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="userename" name="username" placeholder="username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="password">
+        </div>
+        <button type="submit" class="btn btn-primary px-3" id="signup-btn">Signup</button>
+        <span>or <a href="/login">Login</a></span>
+        <div id="feedback" class="d-inline ml-3"></div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

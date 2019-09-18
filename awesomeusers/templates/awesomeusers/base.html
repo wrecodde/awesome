@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% load static %}
+  <!-- vendor stylesheets -->
+  <link rel="stylesheet" href="{% static 'awesomeusers/bootstrap/css/bootstrap.min.css' %}">
+
+  {% block title %}
+  <title>App Awesome</title>
+  {% endblock %}
+</head>
+<body class="bg-dark">
+  {% block nav %}
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a href="/" class="navbar-brand">Awesome</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="{% url 'awesomeusers:login' %}" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'awesomeusers:signup' %}" class="nav-link">Signup</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  {% endblock %}
+
+  {% block content %}
+
+  {% endblock %}
+
+  {% block footer %}
+
+  {% endblock %}
+</body>
+  <script src="{% static 'awesomeusers/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'awesomeusers/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</html>
