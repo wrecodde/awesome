@@ -1,5 +1,11 @@
 # ignoring venv folder
 venv/
 
+# ignore vscode dir
+.vscode/
+
 # ignoring python cache files
 *.pyc
+
+# ignore django migrations
+*/migrations/
